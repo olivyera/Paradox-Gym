@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    font-size: 0.625em;
+}
+
+@media (min-width: 100em) {
+    html {
+        font-size: 0.75em;
+    }
+}
+
+/*
+@media (min-width: 120em) {
+    html {
+        font-size: 0.9em;
+    }
+}
+@media (min-width: 140em) {
+    html {
+        font-size: 1.05em;
+    }
+}
+*/
+
+body {
+    font-family: "Montserrat", arial;
+    font-size: 1.6rem;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(100, 100, 100);
+
+    background-image:
+        linear-gradient(101deg, 
+            rgb(226,29,60) 50%,
+            rgba(0,0,0, 0.5) 50%,
+            transparent 55%),
+        url(../images/waves-cropped.svg),
+        linear-gradient(0deg,
+            rgba(0,0,0, 0.5) 0%,
+            rgba(0,0,0, 0.5) 100%),
+        url(../images/pexels-cesar-galeao-3289711-gray.jpg);
+
+    background-attachment:
+        fixed,
+        fixed,
+        fixed,
+        fixed;
+
+    background-repeat:
+        no-repeat,
+        no-repeat,
+        no-repeat, 
+        no-repeat;
+
+    background-size:
+        100% 100%,
+        40% auto,
+        100% 100%,
+        calc(50% + 20vh) auto;
+
+    background-position:
+        -10vh 50%,
+        100% 100%,
+        50% 50%,
+        100% 25%;
+}
+@media (max-width: 62.5em) {
+    body {
+        background-image: url(../images/waves-white-cropped.svg);
+        background-color: rgb(226,29,60);
+        background-attachment: initial;
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: 50vw auto;
+    }
+}
+@media (max-width: 30em) {
+    body {
+        background-image: none;
+    }
+}
+
+/* Haupt Page */
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+    min-height: 100vh;
+}
+@media (max-width: 62.5em) {
+    .flex {
+        flex-direction: column;
+    }
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* LINKS */
+.main-content {
+    flex: 0 0 40%;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* RECHTS */
+.countdown {
+    flex: 0 1 60%;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.countdown-heading {
+    margin: 3rem 0 0 0;
+    text-align: center;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+.countdown-days {
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 5.8rem;
+}
+
+.logo {
+    width: 27.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+@media (max-width: 62.5em) {
+    .logo {
+        display: block;
+        margin: 1.5rem auto 0 auto;
+    }
+}
+
+.offer {
+    align-self: center;
+    margin: 7.5rem 1.5rem 10rem 1.5rem;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+@media (max-width: 62.5em) {
+    .offer {
+        align-items: center;
+        margin-bottom: 3rem;
+    }
+}
+
+.main-heading {
+    letter-spacing: 0.05em;
+
+    font-style: italic;
+    font-weight: normal;
+    color: white;
+}
+
+@media (max-width: 62.5em) {
+    .main-heading {
+        text-align: center;
+    }
+}
+
+.main-heading > stronge {
+    text-transform: uppercase;
+}
+
+.price {
+    display: block;
+    font-size: 13rem;
+    margin-top: 1.8rem;
+}
+
+.button {
+    display: inline-block;
+    color: white;
+    background-color: black;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-style: normal;
+    border-radius: 9999rem;
+    padding: 0.5rem 3rem;
+    line-height: 4rem;
+}
+
+.button:hover {
+    color: black;
+    background-color: white;
+}
+
+.last-text {
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    color: black;
+}
